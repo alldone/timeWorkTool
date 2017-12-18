@@ -42,10 +42,10 @@ namespace WorkTools {
         }
 
         private void makeList() {
-            lst.Columns.Add("GIORNO", 100);
-            lst.Columns.Add("Inizio", 170);
-            lst.Columns.Add("Fine", 170);
-            lst.Columns.Add("Lavorato", 200);
+            lst.Columns.Add("Day", 100);
+            lst.Columns.Add("Start", 170);
+            lst.Columns.Add("Finish", 170);
+            lst.Columns.Add("Worked", 200);
         }
     }
 }
