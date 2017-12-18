@@ -1,5 +1,5 @@
 # timeWorkTool
-track the time spent at work
+track the time spent at work, when you block pc with WINDOWS + L, it register the time off
 
 
 # timeWorkTool Database
