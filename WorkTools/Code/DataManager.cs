@@ -19,13 +19,11 @@ namespace WorkTools.Code {
             var directory = getDirectory();
             var myFiles = Directory.GetFiles(directory, User + ".json*", SearchOption.AllDirectories);
             foreach (var file in myFiles) {
-
                 using (StreamReader file1 = File.OpenText(file)) {
                     JsonSerializer serializer = new JsonSerializer();
                     var result = (List<Monitoring>)serializer.Deserialize(file1, typeof(List<Monitoring>));
                     ret = result;
                 }
-
             }
             return ret;
         }
