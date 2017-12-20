@@ -29,10 +29,12 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dayLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.timerMonitor = new System.Windows.Forms.Timer(this.components);
             this.openFolderDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerMonitor = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,8 @@
             this.toolStripMenuItem1,
             this.openFolderDatabaseToolStripMenuItem,
             this.toolStripMenuItem2,
+            this.configurationToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.minimizeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -69,12 +73,6 @@
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 6);
-            // 
-            // timerMonitor
-            // 
-            this.timerMonitor.Enabled = true;
-            this.timerMonitor.Interval = 1000;
-            this.timerMonitor.Tick += new System.EventHandler(this.timerMonitor_Tick);
             // 
             // openFolderDatabaseToolStripMenuItem
             // 
@@ -94,6 +92,24 @@
             this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.minimizeToolStripMenuItem.Text = "Minimiz&e";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
+            // 
+            // timerMonitor
+            // 
+            this.timerMonitor.Enabled = true;
+            this.timerMonitor.Interval = 1000;
+            this.timerMonitor.Tick += new System.EventHandler(this.timerMonitor_Tick);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(184, 6);
+            // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.configurationToolStripMenuItem.Text = "&Configuration";
+            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -125,6 +141,8 @@
         private System.Windows.Forms.ToolStripMenuItem openFolderDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem minimizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }
 }
 

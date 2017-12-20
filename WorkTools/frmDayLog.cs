@@ -24,21 +24,17 @@ namespace WorkTools {
 
         private void bindList() {
             List<Monitoring> list = DataManager.read();
-             
+            list = list.OrderByDescending(z => z.Day).ToList();
             foreach (Monitoring item in list) {
                 string[] arr = new string[4];
                 ListViewItem itm;
-
-                //Add first item
                 arr[0] = item.Day.ToString(FORMATTER_DAY);
                 arr[1] = item.FirstSeenInDay.ToString(FORMATTER_DAY_MIN);
                 arr[2] = item.LastSeenInDay.ToString(FORMATTER_DAY_MIN);
                 arr[3] = item.Calculate();
                 itm = new ListViewItem(arr);
                 lst.Items.Add(itm);
-
             }
-
         }
 
         private void makeList() {

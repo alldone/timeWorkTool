@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -70,6 +70,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -82,9 +83,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\DataManagerConf.cs" />
     <Compile Include="Code\DataManager.cs" />
+    <Compile Include="Code\Model\Configuration.cs" />
     <Compile Include="Code\Model\Monitoring.cs" />
     <Compile Include="Code\Model\MonitoringItem.cs" />
+    <Compile Include="frmConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguration.Designer.cs">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoveFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoveFile.Designer.cs">
+      <DependentUpon>frmMoveFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +114,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfiguration.resx">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDayLog.resx">
       <DependentUpon>frmDayLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoveFile.resx">
+      <DependentUpon>frmMoveFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -127,7 +148,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
