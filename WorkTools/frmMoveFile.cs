@@ -99,5 +99,33 @@ namespace WorkTools {
                 this.mainForm.Minimize();
             }
         }
+
+        private void lblCurrentDirectory_MouseClick(object sender, MouseEventArgs e) {
+            if (File.Exists(lblCurrentDirectory.Text)) {
+                switch (MessageBox.Show("[YES/SI] to open Directory,[NO] to open the file, [CANCEL] to discard", "OPEN", MessageBoxButtons.YesNoCancel)) {
+                    case DialogResult.Yes:
+                        var dir = lblCurrentDirectory.Text.Substring(0,
+                            lblCurrentDirectory.Text.LastIndexOf("\\"));
+                        System.Diagnostics.Process.Start("explorer.exe", dir);
+
+                        break;
+                    case DialogResult.No:
+                        System.Diagnostics.Process.Start(lblCurrentDirectory.Text);
+
+                        break;
+                    default: break;
+                }
+            } else
+            if (Directory.Exists(lblCurrentDirectory.Text)) {
+                switch (MessageBox.Show("[YES/SI] to open Directory,[NO] to discard", "OPEN", MessageBoxButtons.YesNo)) {
+                    case DialogResult.Yes:
+                        var dir = lblCurrentDirectory.Text.Substring(0,lblCurrentDirectory.Text.LastIndexOf("\\"));
+                        System.Diagnostics.Process.Start("explorer.exe", dir);
+
+                        break;
+                    default: break;
+                }
+            }
+        }
     }
 }

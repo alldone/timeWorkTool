@@ -63,11 +63,14 @@
             // lblCurrentDirectory
             // 
             this.lblCurrentDirectory.AutoSize = true;
+            this.lblCurrentDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentDirectory.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblCurrentDirectory.Location = new System.Drawing.Point(14, 87);
             this.lblCurrentDirectory.Name = "lblCurrentDirectory";
             this.lblCurrentDirectory.Size = new System.Drawing.Size(35, 13);
             this.lblCurrentDirectory.TabIndex = 2;
             this.lblCurrentDirectory.Text = "label2";
+            this.lblCurrentDirectory.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCurrentDirectory_MouseClick);
             // 
             // btnMove
             // 
